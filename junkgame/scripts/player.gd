@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
-@export var move_speed: float = 200.0
+@export var move_speed: float = 100.0
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
@@ -18,8 +18,8 @@ func _physics_process(delta: float) -> void:
 		velocity = input_vector * move_speed
 		
 		if input_vector.x != 0:
-			last_direction = "side"
 			sprite.flip_h = input_vector.x < 0
+			last_direction = "side"
 			anim.play("walk_side")
 		elif input_vector.y < 0:
 			last_direction = "up"
@@ -30,7 +30,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = Vector2.ZERO
 		# Play idle animation based on last direction faced
-		print(last_direction)
 		match last_direction:
 			"side":
 				anim.play("idle_side")
