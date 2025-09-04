@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0d8bs2jjyc38"]
+
+[ext_resource type="Script" uid="uid://bkpbl3bkv26v3" path="res://scripts/light_source.gd" id="1_sj0jd"]
+
+[sub_resource type="Gradient" id="Gradient_rgxqc"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sj0jd"]
+gradient = SubResource("Gradient_rgxqc")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0.1)
+
+[node name="LightSource" type="Node2D"]
+script = ExtResource("1_sj0jd")
+speed = 0.4
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.470588, 0.470588, 0.678431, 1)
+energy = 0.75
+blend_mode = 2
+texture = SubResource("GradientTexture2D_sj0jd")
