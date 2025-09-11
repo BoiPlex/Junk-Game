@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://c0d8bs2jjyc38" path="res://scenes/light_source.tscn" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
+radius = 5.0
+height = 10.0
 
 [sub_resource type="Animation" id="Animation_qhqgy"]
 length = 0.001
@@ -254,14 +256,15 @@ graph_offset = Vector2(42, -121)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_qhqgy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_dqkch")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.5, -5)
 texture = ExtResource("2_g2els")
 hframes = 10
 vframes = 3
 frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dqkch")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1obg2di125ap"
-path="res://.godot/imported/SL001.png-5a4b1943d43d11a9e498852019510f92.ctex"
+uid="uid://cfjn4wruya2h7"
+path="res://.godot/imported/CP_V1.0.4.png-5a535ea663d7a22742febc7cb9a8ec2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/city/Animations/SL001.png"
-dest_files=["res://.godot/imported/SL001.png-5a4b1943d43d11a9e498852019510f92.ctex"]
+source_file="res://assets/city1/CP_V1.0.4_nyknck/CP_V1.0.4.png"
+dest_files=["res://.godot/imported/CP_V1.0.4.png-5a535ea663d7a22742febc7cb9a8ec2a.ctex"]
 
 [params]
 
